@@ -1,0 +1,148 @@
+/*
+Theme Name: Hotelia
+Theme URI: https://github.com/Nourhb/hotelia-hotel-theme
+Author: Nour El Houda Bouajila
+Author URI: https://nour-el-houda-bouajila.rf.gd/
+Description: Hotelia is a luxurious Full Site Editing theme crafted for hotels and boutique stays. Deep navy and champagne gold design, booking hero, rooms and suites showcase, amenities grid, gallery, dining teaser, testimonials and reservation CTAs — everything a refined hotel needs to welcome guests online.
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.9
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: hotelia
+Tags: full-site-editing, block-patterns, block-styles, hotel, hospitality, booking, custom-colors, custom-logo, featured-images, threaded-comments, translation-ready, wide-blocks, editor-style
+*/
+
+/* ---------- Base polish ---------- */
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* ---------- Reveal on scroll ---------- */
+
+.hotelia-reveal {
+	opacity: 0;
+	transform: translateY(26px);
+	transition: opacity .7s ease, transform .7s ease;
+}
+
+.hotelia-reveal.is-visible {
+	opacity: 1;
+	transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hotelia-reveal {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+}
+
+/* ---------- Gold rule under headings ---------- */
+
+.is-style-gold-rule {
+	position: relative;
+	padding-bottom: 1.1rem;
+}
+
+.is-style-gold-rule::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 64px;
+	height: 3px;
+	background: var(--wp--preset--color--gold);
+}
+
+/* ---------- Room cards ---------- */
+
+.is-style-room-card {
+	border-radius: 14px;
+	overflow: hidden;
+	box-shadow: var(--wp--preset--shadow--card);
+	transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.is-style-room-card:hover {
+	transform: translateY(-6px);
+	box-shadow: var(--wp--preset--shadow--lift);
+}
+
+.is-style-room-card img {
+	transition: transform .6s ease;
+}
+
+.is-style-room-card:hover img {
+	transform: scale(1.04);
+}
+
+/* ---------- Gold outline buttons ---------- */
+
+.is-style-gold-outline .wp-block-button__link,
+.wp-block-button.is-style-gold-outline .wp-block-button__link {
+	background: transparent;
+	color: var(--wp--preset--color--gold);
+	border: 2px solid var(--wp--preset--color--gold);
+}
+
+.is-style-gold-outline .wp-block-button__link:hover,
+.wp-block-button.is-style-gold-outline .wp-block-button__link:hover {
+	background: var(--wp--preset--color--gold);
+	color: var(--wp--preset--color--ink);
+}
+
+/* ---------- Booking bar ---------- */
+
+.hotelia-booking-bar input,
+.hotelia-booking-bar select {
+	width: 100%;
+	border: 1px solid #d9d2c2;
+	border-radius: 8px;
+	padding: .7rem .9rem;
+	font-size: .95rem;
+	background: #fff;
+	color: var(--wp--preset--color--ink);
+}
+
+/* ---------- Back to top ---------- */
+
+.hotelia-to-top {
+	position: fixed;
+	right: 1.25rem;
+	bottom: 1.25rem;
+	width: 46px;
+	height: 46px;
+	border-radius: 50%;
+	border: none;
+	background: var(--wp--preset--color--gold);
+	color: var(--wp--preset--color--ink);
+	font-size: 1.25rem;
+	cursor: pointer;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity .3s ease, transform .3s ease;
+	z-index: 60;
+}
+
+.hotelia-to-top.is-visible {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.hotelia-to-top:hover {
+	transform: translateY(-3px);
+}
