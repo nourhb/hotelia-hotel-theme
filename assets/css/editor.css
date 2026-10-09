@@ -1,0 +1,61 @@
+/* Hotelia editor styles — keeps the block editor close to the front end. */
+
+.editor-styles-wrapper {
+	font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	line-height: 1.7;
+	color: #1c2836;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3 {
+	font-family: "Playfair Display", Georgia, serif;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.hotelia-badge {
+	display: inline-block;
+	padding: .35rem .9rem;
+	border-radius: 999px;
+	font-size: .72rem;
+	font-weight: 700;
+	letter-spacing: .12em;
+	text-transform: uppercase;
+}
+
+.hotelia-badge--gold { background: #c8a45c; color: #0d1420; }
+.hotelia-badge--ink { background: #0d1420; color: #fff; }
+.hotelia-badge--ivory { background: #faf7f0; color: #0d1420; }
+
+.is-style-gold-outline .wp-block-button__link {
+	background: transparent;
+	color: #c8a45c;
+	border: 2px solid #c8a45c;
+}
+
+.is-style-room-card {
+	border-radius: 14px;
+	overflow: hidden;
+}
+
+.is-style-soft-frame img {
+	border-radius: 12px;
+	box-shadow: 0 16px 40px -12px rgba(13, 20, 32, .18);
+}
+
+.is-style-gold-rule {
+	position: relative;
+	padding-bottom: .75rem;
+}
+
+.is-style-gold-rule::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 64px;
+	height: 3px;
+	background: #c8a45c;
+	border-radius: 2px;
+}
